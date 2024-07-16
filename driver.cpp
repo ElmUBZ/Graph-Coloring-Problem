@@ -61,10 +61,17 @@ void printSolution(int n, vector<Vertex> vList) {
 
 int main() {
 
+	char userChar = 'y'; 
+	cout << "***Graph Representation Should be in the Form:***" << endl; 
+	cout << "- # of Colors \n- # of Vertices \n- List of Points \n- (-1 -1) to End" << endl;
+	cout << "\nExample: 2 4 (0 1)(1 2)(2 3)(3 0)(-1 -1)" << endl; 
+
+do {
+
 	int m; //m is the number of colors you're constrained by
 	int n; //n is the number of verticies you will be given
 
-	cout << "Enter a graph representation: ";
+	cout << "\nEnter a graph representation: ";
 	cin >> m;
 	cin >> n;
 
@@ -91,5 +98,10 @@ int main() {
 
 	findSolution(n, m, vList); 
 
+	cout << "\nEnter \'Y\' or \'y\' to Run Another Problem: "; 
+	cin >> userChar; 
+
+}while ((userChar == 'y') || (userChar == 'Y')); 
+	
 	return 0; 
 }
